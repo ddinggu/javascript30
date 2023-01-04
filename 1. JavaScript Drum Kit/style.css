@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#global-screen {
+    background-image: url('./assets/background.jpg');
+    width: 100%;
+    height: 100vh;
+}
+
+.box-container {
+    display: flex;
+}
