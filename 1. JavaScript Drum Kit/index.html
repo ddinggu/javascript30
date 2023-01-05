@@ -6,10 +6,90 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Javascript Drum Kit</title>
         <link rel="stylesheet" href="./style.css" />
+        <script async src="./shim_keyboard_key.js"></script>
     </head>
     <body>
         <div id="global-screen">
-            <div class="box-container">123</div>
+            <div class="drum-container">
+                <div class="drum-box" data-key="A">
+                    <kbd class="drum-key">A</kbd>
+                    <span class="drum-name">clap</span>
+                </div>
+                <div class="drum-box" data-key="S">
+                    <kbd class="drum-key">S</kbd>
+                    <span class="drum-name">hihat</span>
+                </div>
+                <div class="drum-box" data-key="D">
+                    <kbd class="drum-key">D</kbd>
+                    <span class="drum-name">kick</span>
+                </div>
+                <div class="drum-box" data-key="F">
+                    <kbd class="drum-key">F</kbd>
+                    <span class="drum-name">openhat</span>
+                </div>
+                <div class="drum-box" data-key="G">
+                    <kbd class="drum-key">G</kbd>
+                    <span class="drum-name">boom</span>
+                </div>
+                <div class="drum-box" data-key="H">
+                    <kbd class="drum-key">H</kbd>
+                    <span class="drum-name">ride</span>
+                </div>
+                <div class="drum-box" data-key="J">
+                    <kbd class="drum-key">J</kbd>
+                    <span class="drum-name">snare</span>
+                </div>
+                <div class="drum-box" data-key="K">
+                    <kbd class="drum-key">K</kbd>
+                    <span class="drum-name">tom</span>
+                </div>
+                <div class="drum-box" data-key="L">
+                    <kbd class="drum-key">L</kbd>
+                    <span class="drum-name">tink</span>
+                </div>
+            </div>
         </div>
+        <div id="hidden">
+            <!-- Each browser have different audio and video codecs
+            So, prepare other type of contents or various support type like mp3, mp4..
+            https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content -->
+            <audio data-key="A">
+                <source src="./assets/sounds/clap.wav" type="audio/wav" />
+                <a href="./assets/sounds/clap.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="S">
+                <source src="./assets/sounds/hihat.wav" type="audio/wav" />
+                <a href="./assets/sounds/hihat.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="D">
+                <source src="./assets/sounds/kick.wav" type="audio/wav" />
+                <a href="./assets/sounds/kick.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="F">
+                <source src="./assets/sounds/openhat.wav" type="audio/wav" />
+                <a href="./assets/sounds/openhat.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="F">
+                <source src="./assets/sounds/boom.wav" type="audio/wav" />
+                <a href="./assets/sounds/boom.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="G">
+                <source src="./assets/sounds/ride.wav" type="audio/wav" />
+                <a href="./assets/sounds/ride.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="H">
+                <source src="./assets/sounds/snare.wav" type="audio/wav" />
+                <a href="./assets/sounds/snare.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="J">
+                <source src="./assets/sounds/tom.wav" type="audio/wav" />
+                <a href="./assets/sounds/tom.wav">오디오 미지원</a>
+            </audio>
+            <audio data-key="L">
+                <source src="./assets/sounds/tink.wav" type="audio/wav" />
+                <a href="./assets/sounds/tink.wav">오디오 미지원</a>
+            </audio>
+        </div>
+        <script src="./index.js"></script>
     </body>
 </html>
