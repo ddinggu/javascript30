@@ -1,0 +1,55 @@
+:root {
+    --clock-frame-size: 300px;
+    --light-uv: rgba(0, 0, 255, 0.45);
+}
+
+.clock-container {
+    min-height: 100vh;
+    background: var(--light-uv);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-frame {
+    position: relative;
+    width: var(--clock-frame-size, 300px);
+    height: var(--clock-frame-size, 300px);
+    border: 10px solid #ffffff;
+    border-radius: 50%;
+}
+
+.clock-hand {
+    position: absolute;
+    top: 50%;
+    transition: transform 0.3s cubic-bezier(0.6, 0.18, 0.6, 0.73);
+}
+
+.hour-hand {
+    height: 8px;
+    width: 30%;
+    left: 50%;
+    background-color: brown;
+    /* clock HOUR HAND size diff other hands.
+       so, transform start spot change like under */
+    transform-origin: 0;
+    transform: rotate(-90deg);
+}
+
+.minute-hand {
+    height: 6px;
+    width: 45%;
+    left: 5%;
+    background-color: black;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+}
+
+.second-hand {
+    width: 50%;
+    height: 3px;
+    background-color: green;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+}
