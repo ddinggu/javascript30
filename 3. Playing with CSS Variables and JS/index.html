@@ -8,7 +8,23 @@
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <div class="test">
+        <div id="main">
+            <h1 class="title">
+                Update CSS Variables with <span class="hl">JS</span>
+            </h1>
+            <div class="control-wrapper">
+                <label for="img-spacing">Spacing</label>
+                <input type="range" id="img-spacing" name="img-spacing" />
+                <label for="img-blur">Blur</label>
+                <input type="range" id="img-blur" name="img-blur" />
+                <label for="img-blur-color">Base Color</label>
+                <input
+                    type="color"
+                    id="img-blur-color"
+                    name="img-blur-color"
+                    value="#ffc600"
+                />
+            </div>
             <picture>
                 <source
                     media="(prefers-color-scheme: dark)"
@@ -32,32 +48,33 @@
                     alt="Experimental orange gradient portrait image by Linus Belanger"
                 />
             </picture>
+            <p class="reference-info">
+                Photo by
+                <a
+                    href="https://unsplash.com/@linusbelanger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Linus Belanger
+                </a>
+                on Unsplash
+                <a
+                    href="https://unsplash.com/photos/hpnLxPJ7x-Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Image_1
+                </a>
+                &
+                <a
+                    href="https://unsplash.com/photos/VZS06WtdlFU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Image_2
+                </a>
+            </p>
         </div>
-        <p class="reference-info">
-            Photo by
-            <a
-                href="https://unsplash.com/@linusbelanger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Linus Belanger
-            </a>
-            on Unsplash
-            <a
-                href="https://unsplash.com/photos/hpnLxPJ7x-Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Image_1
-            </a>
-            &
-            <a
-                href="https://unsplash.com/photos/VZS06WtdlFU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Image_2
-            </a>
-        </span>
+        <script src="./index.js"></script>
     </body>
 </html>
