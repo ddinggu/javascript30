@@ -37,8 +37,20 @@
 }
 
 .control-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     font-size: 2rem;
     margin: 2rem 0;
+}
+
+.control-wrapper label {
+    margin: 0 1.5rem;
+}
+
+.control-wrapper input[type='range'] {
+    width: 10rem;
 }
 
 picture img {
