@@ -1,0 +1,24 @@
+@import url('../reset.css');
+
+:root {
+    --apollo-deception: #767676;
+    --sageblue: #193549;
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+.reference-info {
+    margin: 10px;
+}
+
+.reference-info a {
+    color: var(--apollo-deception);
+    text-decoration-line: underline;
+    transition: color 0.1s ease-in-out, opacity 0.1s ease-in-out;
+}
+
+.reference-info a:hover {
+    color: black;
+    opacity: 0.9;
+}

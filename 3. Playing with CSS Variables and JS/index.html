@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Playing with CSS Variables and JS</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="test">
+            <picture>
+                <source
+                    media="(prefers-color-scheme: dark)"
+                    srcset="
+                        ./assets/image/linus-belanger-VZS06WtdlFU-unsplash-small.jpg   400w,
+                        ./assets/image/linus-belanger-VZS06WtdlFU-unsplash-medium.jpg  700w,
+                        ./assets/image/linus-belanger-VZS06WtdlFU-unsplash-large.jpg  1000w
+                    "
+                    type="image/jpg"
+                />
+                <source
+                    srcset="
+                        ./assets/image/linus-belanger-hpnLxPJ7x-Y-unsplash-small.jpg   400w,
+                        ./assets/image/linus-belanger-hpnLxPJ7x-Y-unsplash-medium.jpg  700w,
+                        ./assets/image/linus-belanger-hpnLxPJ7x-Y-unsplash-large.jpg  1000w
+                    "
+                    type="image/jpg"
+                />
+                <img
+                    src="./assets/image/linus-belanger-hpnLxPJ7x-Y-unsplash-origin.jpg"
+                    alt="Experimental orange gradient portrait image by Linus Belanger"
+                />
+            </picture>
+        </div>
+        <p class="reference-info">
+            Photo by
+            <a
+                href="https://unsplash.com/@linusbelanger?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Linus Belanger
+            </a>
+            on Unsplash
+            <a
+                href="https://unsplash.com/photos/hpnLxPJ7x-Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Image_1
+            </a>
+            &
+            <a
+                href="https://unsplash.com/photos/VZS06WtdlFU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Image_2
+            </a>
+        </span>
+    </body>
+</html>
