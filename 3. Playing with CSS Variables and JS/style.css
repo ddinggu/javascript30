@@ -6,6 +6,15 @@
     --img-base: #ffc600;
     --img-spacing: 10px;
     --img-blur: 10px;
+    --main-font-color: #ffffff;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: #ffffff;
+        --img-base: #f93434;
+        --main-font-color: #000000;
+    }
 }
 
 #main {
@@ -15,7 +24,7 @@
     justify-content: center;
     align-items: center;
     font-size: 3.5rem;
-    color: white;
+    color: var(--main-font-color);
 }
 
 .title {
