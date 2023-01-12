@@ -2,16 +2,14 @@
 
 :root {
     --apollo-deception: #767676;
-    --sageblue: #193549;
-    --base: #ffc600;
-    --spacing: 10px;
-    --blur: 10px;
+    --background-color: #193549;
+    --img-base: #ffc600;
+    --img-spacing: 10px;
+    --img-blur: 10px;
 }
 
 #main {
-    min-width: 100vw;
-    min-height: 100vh;
-    background-color: var(--sageblue);
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +24,7 @@
 }
 
 .title .hl {
-    color: var(--base);
+    color: var(--img-base);
 }
 
 .control-wrapper {
@@ -35,11 +33,10 @@
 }
 
 picture img {
-    padding: var(--spacing);
-    background: var(--base);
-    filter: blur(var(--blur));
-    width: 50vw;
-    height: 50vh;
+    padding: var(--img-spacing);
+    background: var(--img-base);
+    filter: blur(var(--img-blur));
+    width: 30vw;
 }
 
 .reference-info {
