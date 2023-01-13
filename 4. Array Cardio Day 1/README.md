@@ -2,6 +2,8 @@
 
 JS의 Array 내장함수 사용법 숙달
 
+실행방법: `npm run test`
+
 ### 학습내용
 
 1. JS Array 내장함수 기초(stable, mutable method 등)
@@ -15,6 +17,7 @@ JS의 Array 내장함수 사용법 숙달
 1. 재사용성 없는 하나의 로직을 위한 함수 지양
 2. Map, Generator, Buffer 등 사용경험이 없는 기능들의 deep copy에 대한 추가 학습
 3. 파일 모듈화 시 JS doc의 올바른 사용법
-4. 느린 문제해결 속도에 대한 고민
+4. 단순 `console.log`를 통한 테스트가 아닌 test 도구 활용
+5. 느린 문제해결 속도에 대한 고민
 
 출처: [https://JavaScript30.com](https://JavaScript30.com)
