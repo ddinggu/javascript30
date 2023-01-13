@@ -1,0 +1,14 @@
+{
+    "name": "array-cardio-1",
+    "version": "1.0.0",
+    "description": "Wes Bos's Javascript 30, Day4-array cardio",
+    "main": "index.js",
+    "scripts": {
+        "test": "node index.js"
+    },
+    "repository": {
+        "url": "https://github.com/ddinggu/javascript30.git"
+    },
+    "author": "ddinggu",
+    "license": "ISC"
+}
