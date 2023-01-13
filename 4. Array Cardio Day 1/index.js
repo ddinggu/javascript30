@@ -17,6 +17,8 @@ let answer1_1 = filterInventorsHaveCorrectYear(inventors).filter(
 let answer1_2 = filterInventorsHaveCorrectYear(inventors).filter(
     ({ year }) => Math.floor(year / 100) === 15
 );
+console.log(answer1_1);
+console.log(answer1_2);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
@@ -25,16 +27,19 @@ let answer2_1 = inventors.map(({ first, last }) => ({
     first,
     last,
 }));
+console.log(answer2_1);
 
 // Array.prototype.sort() --> Mutable하므로, copy된 배열이 필요함.
 // 3. Sort the inventors by birthdate, oldest to youngest
 let answer3_1 = [].concat(inventors).sort(sortByCompareInventordata);
+console.log(answer3_1);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
 let answer4_1 = inventors.reduce((year, inventor) => {
     return year + inventor.passed - inventor.year;
 }, 0);
+console.log(answer4_1);
 
 // 5. Sort the inventors by years lived
 let answer5_1 = deepCopy(inventors).sort((a, b) => {
@@ -50,6 +55,7 @@ let answer5_1 = deepCopy(inventors).sort((a, b) => {
 
     return 0;
 });
+console.log(answer5_1);
 
 // 6. sort Exercise
 // Sort the people alphabetically by last name
@@ -63,6 +69,7 @@ let answer6_1 = structuredClone(people).sort((person, compared_person) => {
     // 첫글자가 동일한 경우에는 sort 메소드가 자동으로 다음 문자순으로 배열
     return personLastName > comparedPersonLastName ? 1 : -1;
 });
+console.log(answer6_1);
 
 // 7. Reduce Exercise
 // Sum up the instances of each of these
@@ -72,3 +79,4 @@ let answer7_1 = cars.reduce((obj, car) => {
 
     return obj;
 }, {});
+console.log(answer7_1);

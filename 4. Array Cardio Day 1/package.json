@@ -10,5 +10,9 @@
         "url": "https://github.com/ddinggu/javascript30.git"
     },
     "author": "ddinggu",
-    "license": "ISC"
+    "license": "ISC",
+    "engines": {
+        "npm": ">=8.0.0",
+        "node": ">=17.2.0"
+    }
 }
