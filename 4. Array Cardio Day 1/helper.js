@@ -23,33 +23,28 @@ function isString(str) {
 }
 
 /**
- * 깊은복사를 하는 함수.
- * @todo Generater, Promise, AsyncFunction 등 추가 확인필요.
+ * 깊은복사를 하는 함수로, function은 copy하지 않음.
  * @param {*} obj copy하고자 하는 데이터.
  * @returns {*} DeepCopy된 데이터 출력.
  */
 function deepCopy(obj) {
-    if (typeof obj !== 'object' || obj === null) return obj;
+    let clone = obj;
+    var type = {}.toString.call(obj).slice(8, -1);
 
-    if (Array.isArray(obj)) {
-        // Array 체크
-        return obj.reduce((arr, val, idx) => {
-            arr[idx] = deepCopy(val);
-            return arr;
-        }, []);
-    }
-
-    if (obj instanceof Object) {
-        // Object 체크
-        return Object.keys(obj).reduce((clone, key) => {
+    if (type === 'Array' || type === 'Object') {
+        clone = Array.isArray(obj) ? [] : {};
+        for (var key in obj) {
             clone[key] = deepCopy(obj[key]);
-            return clone;
-        }, {});
+        }
     }
 
-    // 사용빈도가 적을 것으로 예상되는 Date, Map은 후순위로 처리
-    if (obj instanceof Date) return new Date(obj.getTime());
-    if (obj instanceof Map) return new Map(obj);
+    if (type === 'Date') return new Date(obj.getTime());
+    if (type === 'RegExp') return new RegExp(obj.source, obj.flags);
+    if (type === 'Map')
+        return new Map([...obj].map(([k, v]) => [deepCopy(k), deepCopy(v)]));
+    if (type === 'Set') return new Set([...obj].map(v => deepCopy(v)));
+
+    return obj;
 }
 
 /**
